@@ -9,6 +9,7 @@ class LibraryItem{
     LibraryItem(){
         type="none";
         id++;
+
     }
     LibraryItem(string n):type(n){id++;};
     void display(){
@@ -26,3 +27,7 @@ class Books:public LibraryItem{
 class DVDs{
 
 };
+int main(){
+
+    
+}
