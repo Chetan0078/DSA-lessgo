@@ -7,30 +7,34 @@ so over main loop will run for i=0 to i=n-2 (because last array element don't ne
 over nested loop will run for j=i to j=n-1 (every time the starting elements are being sorted)
 */
 
-
-
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-void selection(int x, int arr[]){
-    for(int i=0;i<x-2;i++){
-        int min=i;
-        for(int j=i;j<=x-1;j++){
-            if(arr[j]<arr[min])min=j;
+void selection(int x, int arr[])
+{
+    for (int i = 0; i < x - 2; i++)
+    {
+        int min = i;
+        for (int j = i; j <= x - 1; j++)
+        {
+            if (arr[j] < arr[min])
+                min = j;
         }
-        int temp= arr[min];
-        arr[min]=arr[i];
-        arr[i]=temp;
+        int temp = arr[min];
+        arr[min] = arr[i];
+        arr[i] = temp;
     }
 }
 
-
-int main(){
+int main()
+{
     int n;
-    cin>>n;
+    cin >> n;
     int arr[n];
-    for(int i=0;i<n;i++)cin>>arr[i];
-    selection(n,arr);
-    for(int i=0;i<n;i++)cout<<arr[i]<<endl;
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+    selection(n, arr);
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << endl;
     return 0;
 }
