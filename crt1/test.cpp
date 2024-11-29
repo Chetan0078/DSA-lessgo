@@ -10,8 +10,8 @@
 //         }
 //     }
 
-//     int y = x - count;  
-//     int nonzero[y];     
+//     int y = x - count;
+//     int nonzero[y];
 //     int j = 0;
 //     for (int i = 0; i < x; i++) {
 //         if (arr[i] != 0) {
@@ -63,31 +63,38 @@
 #include <iostream>
 using namespace std;
 
-void rotateArray(int arr[], int size, int k) {
+void rotateArray(int arr[], int size, int k)
+{
     k = k % size;
-    if (k < 0) {
-        k += size; 
+    if (k < 0)
+    {
+        k += size;
     }
 
     int temp[size];
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++)
+    {
         temp[(i + k) % size] = arr[i];
     }
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++)
+    {
         arr[i] = temp[i];
     }
 }
 
-void printArray(int arr[], int size) {
-    for (int i = 0; i < size; i++) {
+void printArray(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
         cout << arr[i] << " ";
     }
     cout << endl;
 }
 
-int main() {
+int main()
+{
     int arr[5] = {1, 2, 3, 4, 5};
     int k;
 
