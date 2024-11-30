@@ -1,3 +1,5 @@
+//basically we breking array into two parts by index till the array has 1 element and then we sort them pieces of array and merge them
+
 #include<bits/stdc++.h>
 using namespace std;
 
