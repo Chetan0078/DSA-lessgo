@@ -1,5 +1,7 @@
-#include <bits/stdc++.h>
+
+#include<bits/stdc++.h>
 using namespace std;
+
 
 bool checkIfExist(vector<int>& arr) {
     for (int i = 0; i < arr.size(); i++) {
