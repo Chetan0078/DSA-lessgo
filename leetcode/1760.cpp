@@ -24,5 +24,5 @@ public:
     for (const int num : nums)
       operations += (num - 1) / m;
     return operations;
-    }
+  }
 };
