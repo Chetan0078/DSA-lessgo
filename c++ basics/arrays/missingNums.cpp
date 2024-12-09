@@ -2,14 +2,13 @@
 using namespace std;
 
 int missingNum(vector<int> nums){
-    int result;
-    for (int i = 0; i <= nums.size(); i++) {
-        if (i >= nums.size() || i != nums[i]) {
-            result = i;
-            break;
+        int n = nums.size();
+        int totalSum = n * (n + 1) / 2; 
+        int actualSum = 0;
+        for (int num : nums) {
+            actualSum += num;
         }
-    }
-    return result;
+        return totalSum - actualSum;
 }
 
 int main(){
