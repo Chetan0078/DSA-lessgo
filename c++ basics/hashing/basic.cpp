@@ -1,7 +1,7 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-//if input is array
+// if input is array
 
 // int main(){
 //     int n;
@@ -26,7 +26,7 @@ using namespace std;
 //     }
 // }
 
-//if input is string
+// if input is string
 
 /*int main(){
     string s;
@@ -47,7 +47,7 @@ using namespace std;
     }
 }*/
 
-//hasing of numbers using map 
+// hasing of numbers using map
 /*int main(){
     int n;
     int arr[n];
@@ -70,27 +70,30 @@ using namespace std;
         q--;
     }
 }*/
-//hasing of string using map
-int main(){
+// hasing of string using map
+int main()
+{
     string s;
-    cin>>s;
-    map <char,int> list;
-    //pre compute
-    for(int i=0;i<s.size();i++){
-        list[s[i]]+=1;
+    cin >> s;
+    map<char, int> list;
+    // pre compute
+    for (int i = 0; i < s.size(); i++)
+    {
+        list[s[i]] += 1;
     }
 
-    for(auto it:list){
-        cout<<it.first<<" -> "<<it.second<<endl;
+    for (auto it : list)
+    {
+        cout << it.first << " -> " << it.second << endl;
     }
-    //fetch
+    // fetch
     int q;
-    cin>>q;
-    while(q>0){
+    cin >> q;
+    while (q > 0)
+    {
         char c;
-        cin>>c;
-        cout<<list[c]<<endl;
+        cin >> c;
+        cout << list[c] << endl;
         q--;
     }
-
 }
