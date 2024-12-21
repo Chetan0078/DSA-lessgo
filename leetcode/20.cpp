@@ -1,21 +1,28 @@
 #include <string>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    bool isValid(string s) {
+    bool isValid(string s)
+    {
         string stack; // Use a string as a makeshift stack
 
-        for (char c : s) {
+        for (char c : s)
+        {
             // Push opening brackets to the stack
-            if (c == '(' || c == '[' || c == '{') {
+            if (c == '(' || c == '[' || c == '{')
+            {
                 stack.push_back(c);
-            } else {
+            }
+            else
+            {
                 // Check if the stack is empty or doesn't match the closing bracket
-                if (stack.empty() || 
-                    (c == ')' && stack.back() != '(') || 
-                    (c == ']' && stack.back() != '[') || 
-                    (c == '}' && stack.back() != '{')) {
+                if (stack.empty() ||
+                    (c == ')' && stack.back() != '(') ||
+                    (c == ']' && stack.back() != '[') ||
+                    (c == '}' && stack.back() != '{'))
+                {
                     return false;
                 }
                 stack.pop_back(); // Remove the matching opening bracket
@@ -26,6 +33,6 @@ public:
         return stack.empty();
     }
 };
-int main(){
-    
+int main()
+{
 }
