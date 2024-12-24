@@ -22,17 +22,20 @@ int longestSubarrwithK(vector<int> &arr,int k){//optimal approch
 
 int longarrK(vector<int> &arr,int k){//brute
     int result=0;
-    int sum = 0;
+    int sum;
+
     for(int i=0;i<arr.size();i++){
-        for(int j=0;j<i;j++){
+        sum = 0;
+        for(int j=i;j<arr.size();j++){
             sum +=arr[j];
-            if(sum == k)result = i-j+1;
+            if(sum == k)result = max(result,j-i+1);
         }
     }
+    return result;
 }
 
 int main(){
     vector<int> arr = {1,2,3,-2,1,1,1,1,1,1,2,6};
     int k = 6;
-    cout<<longestSubarrwithK(arr,k);
+    cout<<longarrK(arr,k);
 }
