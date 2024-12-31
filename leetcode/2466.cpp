@@ -1,11 +1,13 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
     const int mod = 1e9 + 7;
 
-    int countGoodStrings(int low, int high, int zero, int one) {
+    int countGoodStrings(int low, int high, int zero, int one)
+    {
         // Initialize a dp array to store the count of good strings of each length
         vector<int> dp(high + 1, 0);
 
@@ -15,17 +17,21 @@ public:
         int result = 0;
 
         // Iterate over all possible lengths from 1 to high
-        for (int i = 1; i <= high; ++i) {
+        for (int i = 1; i <= high; ++i)
+        {
             // If adding `zero` results in a valid length, add its contribution
-            if (i >= zero) {
+            if (i >= zero)
+            {
                 dp[i] = (dp[i] + dp[i - zero]) % mod;
             }
             // If adding `one` results in a valid length, add its contribution
-            if (i >= one) {
+            if (i >= one)
+            {
                 dp[i] = (dp[i] + dp[i - one]) % mod;
             }
             // Add to the result if the current length is within the range [low, high]
-            if (i >= low) {
+            if (i >= low)
+            {
                 result = (result + dp[i]) % mod;
             }
         }
@@ -33,6 +39,6 @@ public:
         return result;
     }
 };
-int main(){
-    
+int main()
+{
 }
