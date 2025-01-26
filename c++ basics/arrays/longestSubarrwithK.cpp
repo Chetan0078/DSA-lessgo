@@ -1,24 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int longestSubarrwithK(vector<int> &arr, int k)
-{ // optimal approch
+int longestSubarrwithK(vector<int> &arr, int k){ // optimal approch
     int i = 0, j = 0;
     int sum = arr[0];
     int result = 0;
     int n = arr.size();
-    while (j < n)
-    {
+    while (j < n){
         j++;
-        while (i < j && sum > k)
-        {
+        while (i < j && sum > k){
             sum -= arr[i];
             i++;
         }
-        if (j < n)
-            sum += arr[j];
-        if (sum == k)
-        {
+        if (j < n) sum += arr[j];
+        if (sum == k){
             result = max(result, j - i + 1);
         }
     }
