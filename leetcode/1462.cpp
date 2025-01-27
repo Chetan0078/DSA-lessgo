@@ -29,15 +29,14 @@ public:
     }
 };
 
-int main(){
-    Solution s;
-    vector<bool> result;
-    int n;
-    vector<vector<int>> prerequisites;
-    vector<vector<int>> queries;
-    result = s.checkIfPrerequisite(n,prerequisites,queries);
-    for(int i=0;i<result.size();i++){
-        if(result[i])cout<<"true"<<endl;
-        else cout<<"false"<<endl;
+int main() {
+    Solution solution;
+    int numCourses = 4;
+    vector<vector<int>> prerequisites = {{0, 1}, {1, 2}, {2, 3}};
+    vector<vector<int>> queries = {{0, 1}, {0, 3}, {1, 3}, {3, 0}};
+    vector<bool> result = solution.checkIfPrerequisite(numCourses, prerequisites, queries);
+    for (bool res : result) {
+        cout << (res ? "true" : "false") << " ";
     }
+    return 0;
 }
