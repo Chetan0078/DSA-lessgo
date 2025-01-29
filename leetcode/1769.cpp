@@ -7,10 +7,6 @@ public:
     std::vector<int> minOperations(std::string boxes) {
         int numberOfBoxes = boxes.size();
         std::vector<int> operations(numberOfBoxes); // This vector will store the result.
-      
-        // Forward pass to calculate the operations from the left.
-        // Start from the second box (index 1), accumulate the count of balls (1's)
-        // and the operations needed to bring them to each box.
         for (int i = 1, ballCount = 0; i < numberOfBoxes; ++i) {
             if (boxes[i - 1] == '1') {
                 ballCount++; // Increment ball count if the previous box has a ball.
