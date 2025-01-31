@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int optimal(vector<int>& nums) {
+int optimal(vector<int>& nums) {//kadane's algo
     int sum = 0;
     int mx=INT_MIN;
     for(int i = 0;i<nums.size();i++){
