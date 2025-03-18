@@ -24,7 +24,6 @@ public:
             {
                 dp[i] = (dp[i] + dp[i - zero]) % mod;
             }
-            // If adding `one` results in a valid length, add its contribution
             if (i >= one)
             {
                 dp[i] = (dp[i] + dp[i - one]) % mod;
