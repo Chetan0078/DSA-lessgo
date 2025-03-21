@@ -48,7 +48,7 @@ public:
             if(px==py) ans.push_back(parent_cost[px]);
             else ans.push_back(-1);
         }
-        return ans;
+    \]]    return ans;
     }
 };
 
