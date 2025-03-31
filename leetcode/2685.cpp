@@ -9,8 +9,7 @@ public:
         for (auto &edge : edges) {
             adj[edge[0]].push_back(edge[1]);
             adj[edge[1]].push_back(edge[0]);
-        }
-        
+        }    
         int completeComponents = 0;
         function<bool(int, unordered_set<int>&, int&)> dfs = [&](int node, unordered_set<int>& nodes, int& edgeCount) {
             visited[node] = true;
