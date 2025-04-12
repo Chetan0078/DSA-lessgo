@@ -9,10 +9,21 @@ void flip(vector<int> x,int i){
     else x[i+2]=0;
 
 }
-int main(){
-    vector<int> vec = {0,0,0};
-    flip(vec,0);
-    for(auto x:vec){
-        cout<<x<<" ";
+int minOperations(vector<int>& nums, int k) {
+    int n = nums.size();
+    int sum = 0;
+    for(int i=0;i<n;i++){
+        sum += nums[i];
     }
+    if(sum<k)return sum;
+    return sum%k;
+}
+int main(){
+    vector<int> vec = {5,2,3};
+    flip(vec,0);
+    int k = 8;
+    // for(auto x:vec){
+    //     cout<<x<<" ";
+    // }
+    cout<<minOperations(vec,k);
 }
