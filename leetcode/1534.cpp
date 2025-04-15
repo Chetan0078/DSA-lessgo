@@ -20,6 +20,6 @@ public:
     }
 };
 int main(){
-    // lolllll
+    // lollll
 }
     
