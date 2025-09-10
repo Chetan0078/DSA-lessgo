@@ -43,7 +43,7 @@ void deleteNode(Node*& head, int value) {
     while (temp->next != nullptr && temp->next->data != value)
         temp = temp->next;
 
-    if (temp->next == nullptr) return;\
+    if (temp->next == nullptr) return;
 
     Node* toDelete = temp->next;
     temp->next = temp->next->next;

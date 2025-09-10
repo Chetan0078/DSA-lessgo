@@ -2,18 +2,16 @@
 using namespace std;
 class Solution {
 public:
-    // Check if we can split the array into k subarrays such that each has sum <= limit
     bool limit(vector<int>& arr, int limit, int k) {
         int n = arr.size();
-        k = k - 1;  // Number of splits allowed
+        k = k - 1;  
         int curr = 0;
 
         for (int i = 0; i < n; i++) {
-            if (arr[i] > limit) return false;  // Important edge case: a single element exceeds limit
-
+            if (arr[i] > limit) return false;  
             if (curr + arr[i] > limit) {
                 k--;
-                curr = arr[i];  // Start a new subarray
+                curr = arr[i];  
             } else {
                 curr += arr[i];
             }
